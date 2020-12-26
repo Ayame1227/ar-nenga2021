@@ -6,12 +6,12 @@
     <a-scene embedded arjs>
         
         <a-assets>
+                <a-asset-item id="obj" src="babycow.obj"></a-asset-item> <!-- objファイル -->
+                <a-asset-item id="mtl" src="babycow.mtl"></a-asset-item> <!-- mtlファイル -->
         </a-assets>
         
         <a-marker type="pattern" url="pattern-frame.patt">
-             <a-entity 
-               obj-model=”obj: url(babycow.obj); mtl: url(babycow.mtl)”>
-             </a-entity>
+             <a-obj-model src="#obj" mtl="#mtl" scale="1 1 1" position="0 1.5 0"></a-obj-model>
              <a-text value="A Happy New Year 2021" position="0 0 0" align="center"></a-text>
         </a-marker>
         
